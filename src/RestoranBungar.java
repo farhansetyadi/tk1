@@ -42,20 +42,20 @@ public class RestoranBungar {
 			malam = 24; // batas jam saat akhir malam hari  pukul 18:00 - 24:00
 
 			if ((currentHour > pagi ) && ( currentHour <= siang)){
-				System.out.println("Selamat datang dan Selamat Pagi.....");
+				System.out.println("Selamat Pagi...");
 			} else if ((siang < currentHour) && (currentHour <= sore)){
-				System.out.println("Selamat datang dan Selamat Siang....");
+				System.out.println("Selamat Siang...");
 			} else if ((sore < currentHour) && (currentHour <= sorePetang)) {
-				System.out.println("Selamat datang dan Selamat Sore....");
+				System.out.println("Selamat Sore....");
 			} else if ((sorePetang < currentHour) && (currentHour <= malam)) {
-				System.out.println("Selamat datang dan Selamat Malam....");
+				System.out.println("Selamat Malam...");
 			} else {
 				System.out.println("Mohon maaf, restoran kami sedang tidak melayani pelanggan. Terima kasih");
 			}
 			System.out.println();
 
 			//====================Add Jumlah==================== //
-			System.out.print("Pesanan untuk berapa orang? : ");
+			System.out.print("Pesanan untuk berapa orang : ");
 			jumlah_orang = input.nextInt();
 
 			//====================Add Nama Pemesanan==================== //
@@ -66,7 +66,7 @@ public class RestoranBungar {
 			//====================Daftar Menu==================== //
 			System.out.println("\n Menu Special Hari Ini");
 			System.out.println("==========================");
-			System.out.println("   1. Nasi Ayam Goreng Spesial " + "\t@" + "\tRp. " + makanan1_price);
+			System.out.println("   1. Nasi Goreng Spesial  " + "\t@" + "\tRp. " + makanan1_price);
 			System.out.println("   2. Ayam Bakar Spesial " + "\t\t@" + "\tRp. " + makanan2_price);
 			System.out.println("   3. Steak Sirloin Spesial " + "\t@" + "\tRp. " + makanan3_price);
 			System.out.println("   4. Kwetiaw Siram Spesial " + "\t@" + "\tRp. " + makanan4_price);
@@ -112,12 +112,12 @@ public class RestoranBungar {
 		   }
 			System.out.println();
 			
-			System.out.print("Silahkan tekan ENTER Jika anda sudah selesai memilih menu");
-	            try {
-	                System.in.read();
-	            } catch (Exception e) {
-	            }
-	            System.out.println();
+//			System.out.print("Silahkan tekan ENTER Jika anda sudah selesai memilih menu");
+//	            try {
+//	                System.in.read();
+//	            } catch (Exception e) {
+//	            }
+	            System.out.println("Selamat menikmati makanan anda...\n");
 			
 			//====================Proses==================== //
 	        double Menu1 = (A * makanan1_price);
@@ -132,7 +132,7 @@ public class RestoranBungar {
 
 			//====================Harga Pembelian dan Perhitungan==================== //
 			df.setRoundingMode(RoundingMode.UP);
-			System.out.println("Harga Pembelian : ");
+			System.out.println("Pembelian : ");
 			System.out.printf("\n1. Nasi Goreng Spesial \t\t" + A + " Porsi * " + "Rp. " + makanan1_price + "\t= Rp. " + df.format (Menu1));
 			System.out.printf("\n2. Ayam Goreng Spesial \t\t" + B + " Porsi * " + "Rp. " + makanan2_price + "\t= Rp. " + df.format (Menu2));
 			System.out.printf("\n3. Steak Sirloin Spesial \t" + C + " Porsi * " + "Rp. " + makanan3_price + "\t= Rp. " + df.format (Menu3));
@@ -140,13 +140,12 @@ public class RestoranBungar {
 			System.out.printf("\n5. Kambing Guling Spesial \t" + E + " Porsi * " + "Rp. " + makanan5_price + "\t= Rp. " + df.format (Menu5));
 			System.out.println("\t+");
 			System.out.println("=====================================================================");
-			System.out.println("Total Pembelian                                  = Rp. " + df.format (Total));
-			System.out.println("Disc.10% (Masa Promosi)                          = Rp. " + df.format (Diskon) + "\t-");
+			System.out.println("Total Pembelian                                  \t= Rp. " + df.format (Total));
+			System.out.println("Disc.10% (Masa Promosi)                          \t= Rp. " + df.format (Diskon) + "\t-");
 			System.out.println("=====================================================================");
-			System.out.println("Total Pembelian Setelah Disc 10%                 = Rp. " + df.format(Total_Bayar));
-			System.out.println("Pembelian Per Orang (Untuk " + jumlah_orang + " Orang)              = Rp. " + df.format  (Pembelian_Perorang));
+			System.out.println("Total Pembelian Setelah Disc 10%                 \t= Rp. " + df.format(Total_Bayar));
+			System.out.println("Pembelian Per Orang (Untuk " + jumlah_orang + " Orang)                = Rp. " + df.format  (Pembelian_Perorang));
 			System.out.println();
-			System.out.println("=====================================================================");
                
 		
 			System.out.println("			Terima Kasih Atas Kunjungan Anda...");
